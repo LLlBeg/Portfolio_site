@@ -1,0 +1,74 @@
+.experience__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.experience__container > div {
+    background: var(--color-bg-variant);
+    padding: 38px 80px;
+    border-radius: 32px;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.experience__container > div:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: pointer;
+}
+
+.experience__container > div h3 {
+    text-align: center;
+    margin-bottom: 32px;
+    color: var(--color-primary);
+}
+
+.experience__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+}
+
+.experience__details {
+    display: flex;
+    gap: 16px;
+}
+
+.experience__details-icon {
+    margin: 5px;
+    color: var(--color-primary);
+}
+
+
+/*=======================================  (MEDIUM DEVICES) ==========================*/
+
+@media screen and (max-width:1024px) {
+   .experience__container {
+    grid-template-columns: 1fr;
+   }
+
+   .experience__container > div {
+    width: 80%;
+    padding: 32px;
+    margin: 0 auto;
+   }
+
+   .experience__content {
+    padding: 16px;
+   }
+ }
+ 
+ /*=======================================  (SMALL DEVICES) ==========================*/
+ 
+ @media screen and (max-width:600px) {
+    .experience__container {
+        gap: 16px;
+    }
+
+    .experience__container > div {
+        width: 100%;
+        padding: 32px 16px;
+    }
+ 
+ }

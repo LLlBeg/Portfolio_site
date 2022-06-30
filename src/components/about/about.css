@@ -1,0 +1,117 @@
+.about__container {
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+.about__me {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 32px;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+    display: grid;
+    place-items: center;
+}
+
+.about__me-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+
+.about__me-image:hover {
+    transform: rotate(0);
+}
+
+.about__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.about__card {
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.about__card:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.about__icon {
+    color: var(--color-primary);
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.about__card h5 {
+    font-size: 16px;
+}
+
+.about__card small {
+    font-size: 12px;
+    color: var(--color-light);
+}
+
+.about__container p {
+    margin: 32px 0 42px;
+    color: var(--color-light);
+}
+
+
+
+/*=======================================  (MEDIUM DEVICES) ==========================*/
+
+@media screen and (max-width:1024px) {
+   .about__container {
+    grid-template-columns: 1fr;
+    gap: 0;
+   }
+
+   .about__me {
+    width: 50%;
+    margin: 32px auto 64px;
+   }
+
+   .about__content p {
+    margin: 16px 0 24px;
+   }
+
+}
+
+/*=======================================  (SMALL DEVICES) ==========================*/
+
+@media screen and (max-width:600px) {
+    .about_me {
+        width: 65%;
+        margin: 0 auto 48px;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .about__content {
+        text-align: center;
+    }
+
+    .about__content p{
+        margin: 24px;
+    }
+
+}

@@ -1,0 +1,84 @@
+.services__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+}
+
+.service {
+    background: var(--color-bg-variant);
+    border-radius: 32px;
+    border: 1ps solid var(--color-primary);
+    height: fit-content;
+    transition: var(--transition);
+}
+
+.service:hover {
+    background: transparent;
+    padding: 32px;
+    border-radius: 0 0 32px 32px;
+    cursor: pointer;
+}
+
+.service__head {
+    background: var(--color-primary);
+    padding: 32px;
+    border-radius: 32px;
+    box-shadow: 0 32px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service__head h3 {
+    color: var(--color-bg);
+    font-size: 16px;
+    text-align: center;
+}
+
+.service__list {
+    padding: 32px;
+}
+
+.service__list li {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 13px;
+}
+
+.service__list-icon {
+    color: var(--color-primary);
+    margin-top: 2px;
+}
+
+.service__list p {
+    font-size: 15px;
+}
+
+
+/*=======================================  (MEDIUM DEVICES) ==========================*/
+
+@media screen and (max-width:1024px) {
+   .services__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+   }
+
+   .service {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+   }
+ }
+ 
+ /*=======================================  (SMALL DEVICES) ==========================*/
+ 
+ @media screen and (max-width:600px) {
+     .services__container {
+        display: flex;
+     }
+
+     .service {
+        display: flex;
+        width: 100%;
+        text-align: center;
+       }
+ }

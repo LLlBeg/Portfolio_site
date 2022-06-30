@@ -1,0 +1,77 @@
+.container.contact__container {
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap: 12%;
+}
+
+.contact__options {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.contact__options{
+    background: var(--color-bg-variant);
+    padding: 19px;
+    border-radius: 19px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.contact__options:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+}
+
+.contact__options-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.contact__options a {
+    margin-top: 12px;
+    display: inline-block;
+    font-size: 13px;
+}
+
+
+/* ======================  FORM ===================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 19;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 24px;
+    margin: 10px;
+    border-radius: 8px;
+    background: transparent;
+    border: 2px solid var(--color-primary-variant);
+    resize: none;
+    color: var(--color-white);
+}
+
+
+
+
+/*=======================================  (MEDIUM DEVICES) ==========================*/
+
+@media screen and (max-width:1024px) {
+   .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+   }
+ }
+ 
+ /*=======================================  (SMALL DEVICES) ==========================*/
+ 
+ @media screen and (max-width:600px) {
+     .container.contact__container {
+        width: var(--container-width-sm);
+     }
+ }
